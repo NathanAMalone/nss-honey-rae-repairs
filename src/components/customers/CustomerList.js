@@ -1,28 +1,27 @@
 import { useEffect, useState } from "react"
-import "./Custmomers.css"
+import { Customer } from "./Customer"
+import "./Customers.css"
 
-export const EmployeeList = () => {
-    const [employees, setEmployees] = useState([])
+export const CustomerList = () => {
+    const [customers, setCustomers] = useState([])
 
     useEffect(
         () => {
-            fetch('http://localhost:8088/users?isStaff=true')
+            fetch('http://localhost:8088/users?isStaff=false')
                 .then(response => response.json())
-                .then((employeeArray) => {
-                    setEmployees(employeeArray)
+                .then((customerArray) => {
+                    setCustomers(customerArray)
                 })
         },
         []
     )
 
-    return <article className="employees">
+    return <article className="customers">
         {
-            employees.map(employee => {
-                return <section className="employee" key={`employee--${employee.id}`}>
-                    <div>Name: {employee.fullName}</div>
-                    <div>Email: {employee.email}</div>
-                </section>
-            })
-        }    
+            customers.map(customer => <Customer key={`customer--${customer.id}`}
+                id={customer.id} 
+                fullName={customer.fullName} 
+                email={customer.email} />)
+            }    
     </article>
-}  
+}   
