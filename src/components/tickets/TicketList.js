@@ -109,7 +109,8 @@ export const TicketList = ({ searchTermState  }) => {
                     (ticket) => <Ticket employees={employees} 
                         getAllTickets={getAllTickets}
                         currentUser={honeyUserObject} 
-                        ticketObject={ticket} />
+                        ticketObject={ticket} 
+                        key={`ticket--${ticket.id}`}/>
                 )
             }
         </article>
