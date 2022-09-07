@@ -9,3 +9,34 @@
     padding: 0.7rem;
     margin: 0.5rem 0;
 }
+
+.ticketFooter {
+    border-top: 2px dotted darkmagenta;
+    padding: 0.7rem;
+}
+
+.ticket_Finish {
+    background-color: goldenrod;
+    float: right;
+}
+
+.ticket_Finish:hover {
+    background-color: gold;
+}
+
+.ticket_Finish:active {
+    background-color: rgb(223, 204, 158);
+}
+
+.ticket_Delete {
+    background-color: goldenrod;
+    float: right;
+}
+
+.ticket_Delete:hover {
+    background-color: gold;
+}
+
+.ticket_Delete:active {
+    background-color: rgb(223, 204, 158);
+}
