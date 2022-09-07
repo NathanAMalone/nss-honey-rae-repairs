@@ -5,7 +5,7 @@ export const TicketEdit = () => {
     const {ticketId} = useParams()
     const [ticket, update] = useState({
         description: "",
-        emergency: ""
+        emergency: false
     })
     /*
         TODO: Use the useNavigation() hook so you can redirect
@@ -75,7 +75,6 @@ export const TicketEdit = () => {
                 <div className="form-group">
                     <label htmlFor="name">Emergency:</label>
                     <input 
-                       
                        type="checkbox"
                        value={ticket.emergency}
                        checked={ticket.emergency}   
