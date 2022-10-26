@@ -16,7 +16,7 @@ export const Ticket = ({ ticketObject, currentUser, employees, getAllTickets }) 
 
     // TODO: Function that determines if the current user can close the ticket
     const canClose = () => {
-        if (userEmployee?.id === assignedEmployee?.id && ticketObject.dateCompleted === "") {
+        if (userEmployee?.id === assignedEmployee?.id && ticketObject.dateCompleted === "" === currentUser.staff) {
             return <button onClick={closeTicket} className="ticket_Finish">Finish</button>
         }
         else {

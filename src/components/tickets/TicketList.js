@@ -19,7 +19,7 @@ export const TicketList = ({ searchTermState  }) => {
             const searchedTickets = tickets.filter(ticket => {
                 return ticket.description.toLowerCase().startsWith(searchTermState.toLowerCase())
             }) 
-            setFiltered(searchedTickets )
+            setFiltered(searchedTickets)
         },
         [ searchTermState ]
     )
@@ -116,4 +116,5 @@ export const TicketList = ({ searchTermState  }) => {
         </article>
     </>    
 }
+
 
