@@ -22,7 +22,7 @@ export const Login = () => {
             .then(authInfo => {
                 if (authInfo.valid) {
                     localStorage.setItem("honey_customer", authInfo)
-                    navigate("/tickets")
+                    navigate("/")
                 } else {
                     existDialog.current.showModal()
                 }
